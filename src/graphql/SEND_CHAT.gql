@@ -1,0 +1,8 @@
+mutation sendChat($room: String!, $userID: ID!, $body: String!) {
+	sendChat(room: $room, userID: $userID, body: $body) {
+		id
+		userID
+		body
+		createdAt
+	}
+}

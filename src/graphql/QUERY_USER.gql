@@ -1,0 +1,14 @@
+query QueryUser($ID: ID!) {
+	queryUser(ID: $ID) {
+		id
+		username
+		email
+		profileImg
+		profileImg
+		contacts {
+			id
+			username
+			profileImg
+		}
+	}
+}

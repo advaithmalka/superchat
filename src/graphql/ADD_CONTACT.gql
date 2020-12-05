@@ -1,0 +1,14 @@
+mutation addContact($username: String!) {
+	addContact(contactUsername: $username) {
+		username
+		id
+		email
+		profileImg
+		contacts {
+			username
+			id
+			profileImg
+			email
+		}
+	}
+}

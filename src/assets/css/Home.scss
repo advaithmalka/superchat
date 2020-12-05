@@ -1,0 +1,35 @@
+$border: solid 1px grey;
+#home-container {
+	height: 90vh;
+	& > .row {
+		border-radius: 15px;
+		margin: 20px auto;
+		height: 100%;
+		width: 100vw;
+	}
+
+	.contact {
+		padding: 15px 20px;
+		padding-top: 10px;
+		// border-right: $border;
+		border-top: $border;
+	}
+	.contact:first-child {
+		border-top: none;
+	}
+	.contact:last-child {
+		border-bottom: $border;
+	}
+	#contacts {
+		border-right: solid 1px grey;
+	}
+	#add-contact-img {
+		cursor: pointer;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	.row.justify-content-center {
+		margin: 10px 0px;
+	}
+}

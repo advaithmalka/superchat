@@ -1,0 +1,12 @@
+query queryChats($room: String, $userID: String) {
+	queryChats(room: $room, userID: $userID) {
+		id
+		userID
+		body
+		createdAt
+		user {
+			username
+			profileImg
+		}
+	}
+}
