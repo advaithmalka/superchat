@@ -4,7 +4,6 @@ query QueryUser($ID: ID!) {
 		username
 		email
 		profileImg
-		profileImg
 		contacts {
 			id
 			username

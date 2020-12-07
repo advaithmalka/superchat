@@ -1,0 +1,11 @@
+mutation resolveContact($operation: String!, $contactUserID: ID!) {
+	resolveContact(operation: $operation, contactUserID: $contactUserID) {
+		id
+		username
+		contacts {
+			id
+			username
+			profileImg
+		}
+	}
+}

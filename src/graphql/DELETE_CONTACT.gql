@@ -1,0 +1,14 @@
+mutation deleteContact($contactID: ID!) {
+	deleteContact(contactID: $contactID) {
+		id
+		username
+		email
+		profileImg
+		contacts {
+			username
+			id
+			profileImg
+			email
+		}
+	}
+}

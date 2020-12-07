@@ -107,7 +107,7 @@ button.lit-btn {
 
 .navbar-btn {
 	outline: none !important;
-	background-image: linear-gradient(135deg, #329cff, #0059ff);
+	background-image: linear-gradient(135deg, #ff3535, #ff613a);
 	border: none;
 	padding: 8px 20px;
 	border-radius: 5px;
@@ -131,6 +131,7 @@ $primary-col: #329cff;
 	text-transform: uppercase;
 	border: $primary-col 2px solid;
 	color: $primary-col;
+	padding: 6px 20px;
 	background: transparent;
 	box-shadow: none;
 	&:hover {

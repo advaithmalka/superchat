@@ -8,17 +8,22 @@ body {
 * {
 	font-family: "Montserrat", sans-serif;
 }
-
+$spinner-border: 2.5px;
 .lit-spinner {
 	width: 30px;
 	height: 30px;
-	border-top: 3px solid rgba(rgb(255, 255, 255), 1);
-	border-right: 3px solid transparent;
+	border: $spinner-border solid transparent;
+	border-top: $spinner-border solid #f3f3f3;
+	border-bottom: $spinner-border solid #f3f3f3;
 	border-radius: 50%;
-	animation: rotation 0.8s linear infinite;
+	animation: spin 1s linear infinite;
 }
-
-@keyframes rotation {
+.lit-spinner-black {
+	@extend .lit-spinner;
+	border-top: $spinner-border solid #000;
+	border-bottom: $spinner-border solid #000;
+}
+@keyframes spin {
 	from {
 		transform: rotate(0deg);
 	}
