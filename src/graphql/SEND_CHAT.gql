@@ -1,7 +1,8 @@
-mutation sendChat($room: String!, $userID: ID!, $body: String!) {
-	sendChat(room: $room, userID: $userID, body: $body) {
+mutation sendChat($to: String!, $body: String!) {
+	sendChat(to: $to, body: $body) {
 		id
-		userID
+		to
+		from
 		body
 		createdAt
 	}

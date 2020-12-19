@@ -55,8 +55,8 @@ button.lit-btn {
 	height: 40px;
 	padding-top: 5px;
 	outline: none !important;
-	position: relative;
-	left: calc(50vw - 100px) !important;
+	position: relative !important;
+	left: calc(50% - 60px) !important;
 }
 @media screen and (min-width: 992px) {
 	.nav-arrow {
@@ -121,20 +121,51 @@ button.lit-btn {
 		box-shadow: 4px 4px 5px rgba(20, 20, 20, 0.25);
 	}
 }
-$primary-col: #329cff;
+$primary-col: #ff605b;
 .navbar-btn-danger {
 	background-image: linear-gradient(135deg, #ff1f1f, #ff605b);
 	text-transform: uppercase;
 }
 .navbar-btn-outline {
-	background-image: linear-gradient(135deg, #ff1f1f, #ff605b);
 	text-transform: uppercase;
 	border: $primary-col 2px solid;
-	color: $primary-col;
+	border-radius: 5px;
+	transition: all 200ms;
+	color: black;
 	padding: 6px 20px;
-	background: transparent;
+	background: none;
 	box-shadow: none;
+	outline: none !important;
 	&:hover {
 		box-shadow: 3px 3px 5px rgba(56, 56, 56, 0.1);
+		background: #ff4c20;
+		// padding: 7px 22px;
+		// border: none;
+		color: white;
+		// box-shadow: 4px 4px 5px rgba(20, 20, 20, 0.2);
+	}
+}
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700&display=swap");
+
+.f-barlow {
+	font-size: 45px;
+	margin-top: -15px;
+
+	$logo-shadow: 2.5px 2.5px rgba(117, 200, 251, 0.4);
+	#super {
+		color: #4093ff;
+		font-family: "Barlow Condensed", sans-serif;
+		text-shadow: $logo-shadow;
+
+		margin: 0px !important;
+		display: inline;
+	}
+	#chat {
+		color: #ff3847;
+		margin-left: -10px !important;
+		font-family: "Barlow Condensed", sans-serif;
+		text-shadow: $logo-shadow;
+
+		display: inline;
 	}
 }

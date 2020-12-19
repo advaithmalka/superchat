@@ -1,26 +1,51 @@
-.landing-card {
-	padding: 20px 40px;
-	margin-top: 80px !important;
-	margin: auto;
-	max-width: 800px;
-	// background-color: #3b97ff;
-	// color: white;
-	text-align: center;
-	border-radius: 5px;
-	box-shadow: 3px 3px 5px rgba(30, 30, 30, 0.2);
-	
-}
-.landing-btn {
-		border-radius: 6px;
-		margin-top: 20px;
-		background-color: #ff6e5b;
-		padding: 10px 20px;
-		border: none;
-		outline: none !important;
+#landing-page {
+	#landing-container {
+		height: 95vh;
+		// background: linear-gradient(135deg, #ff552b, #ff4719);
 		color: white;
-		box-shadow: 3px 3px 5px rgba(85, 85, 85, 0.2);
-		transition: 200ms;
-		&:hover {
-			box-shadow: 3px 3px 10px rgba(30, 30, 30, 0.2);
+		// text-align: center;
+		padding-top: 50px;
+		h1 {
+			font-size: 80px;
+			padding-top: 25vh;
+		}
+		p.lead {
+			font-size: 25px;
+		}
+		img {
+			float: right;
+			width: 22vw !important;
 		}
 	}
+	#landing-features {
+		background-color: white !important;
+		color: black;
+		text-align: center;
+		padding-top: 100px;
+		.col-lg {
+			margin: 20px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#landing-page {
+		#landing-container {
+			text-align: center;
+			h1 {
+				font-size: 60px;
+			}
+
+			img {
+				float: none;
+				position: absolute;
+				left: calc(50% - 150px);
+				top: 500px;
+				width: 300px !important;
+			}
+		}
+	}
+	#landing-features .container {
+		padding-top: 200px;
+	}
+}

@@ -1,12 +1,9 @@
-query queryChats($room: String, $userID: String) {
-	queryChats(room: $room, userID: $userID) {
+query queryChats($to: String!, $from: String!) {
+	queryChats(to: $to, from: $from) {
 		id
-		userID
+		to
+		from
 		body
 		createdAt
-		user {
-			username
-			profileImg
-		}
 	}
 }

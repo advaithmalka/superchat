@@ -1,0 +1,9 @@
+subscription newChat($to: String!) {
+	newChat(to: $to) {
+		id
+		to
+		from
+		body
+		createdAt
+	}
+}

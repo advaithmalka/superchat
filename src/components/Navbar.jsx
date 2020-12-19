@@ -30,11 +30,11 @@ function Navbar() {
 				className="sticky-top navbar navbar-expand-lg navbar-light nav-color py-2 custom-shadow"
 			>
 				<Link to="/" style={{ textDecoration: "none" }}>
-					<span className="navbar-brand d-block d-lg-none">
+					<span className="navbar-brand d-block d-lg-none my-n1">
 						<img
-							src={`${process.env.PUBLIC_URL}/logo512.png`}
+							src={`${process.env.PUBLIC_URL}/logo512.svg`}
 							alt="Logo"
-							width={40}
+							width={50}
 						/>
 					</span>
 				</Link>
@@ -57,14 +57,15 @@ function Navbar() {
 				<Link to="/">
 					<div
 						id="home-logo"
-						className="navbar-brand d-none d-lg-block"
+						className="navbar-brand d-none d-lg-block f-barlow"
 					>
-						<img
+						{/* <img
 							alt="go to home page"
-							src={""}
+							src={`${process.env.PUBLIC_URL}/SUPERCHAT.png`}
 							height={40}
 							style={{ marginBottom: 10, marginRight: 5 }}
-						/>
+						/> */}
+						<div id="super">SUPER</div> <div id="chat">CHAT</div>
 					</div>
 				</Link>
 				<div
@@ -73,18 +74,23 @@ function Navbar() {
 					className="collapse navbar-collapse justify-content-end "
 				>
 					<ul className="navbar-nav">
-						<a
-							href={
-								user
-									? `https://advaithm26.github.io/devmedia/users/${user.username}`
-									: "signup/"
-							}
-							style={{ textDecoration: "none" }}
-						>
-							<li className="nav-item nav-content nav-link nav-title text-uppercase fs-16 r-router-link">
-								{`${user ? user.username : ""}`}
-							</li>
-						</a>
+						{user ? (
+							<a
+								href={`https://advaithm26.github.io/devmedia/users/${user.username}`}
+								style={{ textDecoration: "none" }}
+							>
+								<li className="nav-item nav-content nav-link nav-title text-uppercase fs-16 r-router-link">
+									{user ? user.username : ""}
+								</li>
+							</a>
+						) : (
+							<Link to="/login">
+								<button className="navbar-btn-outline mx-3">
+									LOGIN
+								</button>
+							</Link>
+						)}
+
 						<Link
 							to={user ? "/login" : "/signup"}
 							style={{ float: "right" }}

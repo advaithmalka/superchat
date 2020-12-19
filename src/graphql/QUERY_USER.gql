@@ -8,6 +8,7 @@ query QueryUser($ID: ID!) {
 			id
 			username
 			profileImg
+			status
 		}
 	}
 }

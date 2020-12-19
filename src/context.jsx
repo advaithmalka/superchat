@@ -3,10 +3,13 @@ import decodeJWT from "jwt-decode";
 
 const token = localStorage.getItem("token");
 let decodedToken;
+let auth = false;
 if (token) {
+	auth = true;
 	decodedToken = decodeJWT(token);
 	if (decodedToken.exp * 1000 < Date.now()) {
 		localStorage.removeItem("token");
+		auth = false;
 	}
 }
 export const Context = createContext({
@@ -34,7 +37,7 @@ const Reducer = (state, action) => {
 
 export const ContextProvider = (props) => {
 	const [state, dispatch] = useReducer(Reducer, {
-		user: decodedToken,
+		user: auth ? decodedToken : null,
 	});
 	const loginUser = (data) => {
 		localStorage.setItem("token", data.token);

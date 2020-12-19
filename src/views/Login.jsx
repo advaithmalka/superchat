@@ -87,23 +87,14 @@ const Login = () => {
 					<div className="box">
 						<button
 							name="signup-submit"
-							className="btn btn-submit blue-grad"
+							className="navbar-btn"
 							type="submit"
 							disabled={loading}
 						>
 							{!loading ? (
 								"LOGIN"
 							) : (
-								<div
-									className="spinner-border"
-									style={{
-										width: 25,
-										height: 25,
-									}}
-									role="status"
-								>
-									<span className="sr-only">Loading...</span>
-								</div>
+								<div className="lit-spinner"></div>
 							)}
 						</button>
 						<p className="mt-2">

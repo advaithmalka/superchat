@@ -23,11 +23,94 @@ $spinner-border: 2.5px;
 	border-top: $spinner-border solid #000;
 	border-bottom: $spinner-border solid #000;
 }
+.lit-spinner-big {
+	@extend .lit-spinner-black;
+	width: 6rem !important;
+	height: 6rem !important;
+}
 @keyframes spin {
 	from {
 		transform: rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+	height: 8px;
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: rgb(241, 241, 241);
+}
+::-webkit-scrollbar-thumb {
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#0015ff),
+		to(#00a2ff)
+	);
+	background: linear-gradient(to bottom, #ff1b1b, #ff6f4b);
+	border-radius: 5px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	&:hover {
+		background: linear-gradient(to bottom, #ff1b1bc4, #ff4e22bb);
+	}
+	&:active {
+		background: linear-gradient(to bottom, #ff1b1bb0, #ff6f4bbd);
+	}
+}
+// DARK MODE
+body.dark-mode {
+	$secondary-col: rgb(22, 22, 22) !important;
+	background-color: $secondary-col;
+	color: #fff !important;
+	$border: solid 1px rgb(53, 53, 53);
+	.contacts-label {
+		border-bottom: $border !important;
+	}
+	.row.contact {
+		border-bottom: $border !important;
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			background: #ff6958 !important;
+		}
+	}
+	#chat-box {
+		background-color: black;
+	}
+
+	$contact-chat-col: rgb(56, 56, 56) !important;
+	.contact-chat .chat-body {
+		background-color: $contact-chat-col;
+		&::before {
+			background: $contact-chat-col;
+		}
+	}
+	form#input-box input {
+		background-color: rgb(37, 37, 37);
+		color: white;
+	}
+	.modal {
+		color: black;
+	}
+	form.sl-form {
+		color: black;
+	}
+	.chat-body {
+		&::after {
+			background: black !important;
+		}
+	}
+	#landing-features {
+		background-color: white !important;
+	}
+	::-webkit-scrollbar-track {
+		background: $secondary-col;
 	}
 }
