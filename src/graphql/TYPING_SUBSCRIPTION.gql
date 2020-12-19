@@ -1,0 +1,5 @@
+subscription typing($to: String!) {
+	typing(to: $to) {
+		status
+	}
+}

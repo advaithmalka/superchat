@@ -2,7 +2,7 @@
 	background-color: white;
 	box-shadow: 5px 5px 10px rgba(20, 20, 20, 0.2);
 	padding: 30px;
-	min-width: 400px;
+	min-width: 100px;
 	margin: 45px auto;
 	border-radius: 10px;
 	top: 45%;
@@ -131,5 +131,6 @@
 	width: 100vw;
 	background-size: cover;
 	background-attachment: fixed;
-	background-image: url("https://miro.medium.com/max/3002/1*dP81IJq-tGFxy1rIK3RYsg.png");
+	background-repeat: no-repeat;
+	background-position: -60px 0px;
 }

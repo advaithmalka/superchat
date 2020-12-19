@@ -1,20 +1,23 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "../assets/css/form.scss";
 import { useMutation } from "@apollo/client";
 import { loader } from "graphql.macro";
-// import bgGrad from "../assets/img/grad.png";
+import landingImg from "../assets/img/landing.jpg";
+
 import { Context } from "../context";
 const LOGIN_USER = loader("../graphql/LOGIN_USER.gql");
 const Login = () => {
 	const context = useContext(Context);
 	const history = useHistory();
 
+	const slFormRef = useRef();
 	useEffect(() => {
 		document.title = "Login | SuperChat";
 		if (context.user) {
 			history.replace("/");
 		}
+		slFormRef.current.style.backgroundImage = `url(${landingImg})`;
 	});
 	const [input, setInput] = useState({
 		username: "",
@@ -48,7 +51,7 @@ const Login = () => {
 	};
 
 	return (
-		<div id="sl-form">
+		<div ref={slFormRef} id="sl-form">
 			<div className="container">
 				<form onSubmit={handleSubmit} className="sl-form pt-5">
 					<h3 className="text-center fw-400 fs-35 ">

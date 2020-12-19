@@ -59,12 +59,6 @@ function Navbar() {
 						id="home-logo"
 						className="navbar-brand d-none d-lg-block f-barlow"
 					>
-						{/* <img
-							alt="go to home page"
-							src={`${process.env.PUBLIC_URL}/SUPERCHAT.png`}
-							height={40}
-							style={{ marginBottom: 10, marginRight: 5 }}
-						/> */}
 						<div id="super">SUPER</div> <div id="chat">CHAT</div>
 					</div>
 				</Link>

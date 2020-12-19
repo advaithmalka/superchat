@@ -19,9 +19,6 @@ const LandingPage = () => {
 				id="landing-container"
 				style={{
 					backgroundImage: `url(${landingImg})`,
-					backgroundPosition: "center",
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "cover",
 				}}
 			>
 				<div className="container">
@@ -110,10 +107,22 @@ const LandingPage = () => {
 					<p className="fs-10" style={{ marginTop: 80 }}>
 						† You may experience some delay based on your internet
 						speed and server traffic.
-						<br />© 2020 - ∞ SuperServer, all rights reserved.
+						<br />© SuperServer 2020 - ∞, all rights reserved.
 					</p>
 				</div>
 			</div>
+			<footer id="landing-footer">
+				©{" "}
+				<a
+					target="_blank"
+					rel="noreferrer"
+					href="https://advaithm26.github.io"
+					className="text-white text-decoration-none"
+				>
+					Advaith Malka
+				</a>{" "}
+				2020 - ∞
+			</footer>
 		</div>
 	);
 };

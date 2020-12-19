@@ -1,0 +1,3 @@
+mutation setTyping($to: String!, $status: Boolean!) {
+	setTyping(to: $to, status: $status)
+}

@@ -8,10 +8,13 @@ import statusPending from "../assets/img/status-pending.svg";
 import statusDeclined from "../assets/img/status-declined.svg";
 import { useMutation, useQuery } from "@apollo/client";
 import { loader } from "graphql.macro";
-
 const SEND_CHAT = loader("../graphql/SEND_CHAT.gql");
+const SET_TYPING = loader("../graphql/SET_TYPING.gql");
 const QUERY_CHATS = loader("../graphql/QUERY_CHATS.gql");
 const CHAT_SUBSCRIPTION = loader("../graphql/CHAT_SUBSCRIPTION.gql");
+const TYPING_SUBSCRIPTION = loader("../graphql/TYPING_SUBSCRIPTION.gql");
+let value = "";
+let newValue = value !== false;
 const Conversation = ({ convo, setConvo, user }) => {
 	const [deleteContact, setDeleteContact] = useState(false);
 	const scroll = useCallback((node) => {
@@ -19,6 +22,8 @@ const Conversation = ({ convo, setConvo, user }) => {
 			node.scrollIntoView(false);
 		}
 	}, []);
+	const [setTyping] = useMutation(SET_TYPING);
+	const [typingState, setTypingState] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -32,6 +37,19 @@ const Conversation = ({ convo, setConvo, user }) => {
 		}
 	};
 	const msgInputRef = useRef();
+
+	const handleChange = (e) => {
+		newValue = value !== (e.target.value !== "");
+		value = e.target.value !== "";
+		if (newValue) {
+			setTyping({
+				variables: {
+					to: convo.username,
+					status: e.target.value !== "",
+				},
+			});
+		}
+	};
 	const chatBoxRef = useRef();
 	useEffect(() => {
 		if (msgInputRef.current) msgInputRef.current.focus();
@@ -53,8 +71,20 @@ const Conversation = ({ convo, setConvo, user }) => {
 			variables: {
 				to: convo.username,
 			},
-			updateQuery: () => {
-				refetch();
+			updateQuery: async () => {
+				await refetch();
+				value = "";
+				newValue = value !== false;
+				setTypingState(false);
+			},
+		});
+		subscribeToMore({
+			document: TYPING_SUBSCRIPTION,
+			variables: {
+				to: user.username,
+			},
+			updateQuery: (_, { subscriptionData }) => {
+				setTypingState(subscriptionData.data.typing.status);
 			},
 		});
 	}, [user]);
@@ -175,11 +205,25 @@ const Conversation = ({ convo, setConvo, user }) => {
 							</div>
 						);
 					})}
+				{typingState && (
+					<div className="chat" ref={scroll}>
+						<div className="contact-chat">
+							<div className="chat-body py-0">
+								<i className="ellipsis fs-25">
+									<i>.</i>
+									<i>.</i>
+									<i>.</i>
+								</i>
+							</div>
+						</div>
+					</div>
+				)}
 			</div>
 			<form onSubmit={handleSubmit} id="input-box">
 				<input
 					ref={msgInputRef}
 					type="text"
+					onChange={handleChange}
 					required
 					autoFocus
 					placeholder="Send a message..."

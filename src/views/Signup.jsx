@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "../assets/css/form.scss";
+import landingImg from "../assets/img/landing.jpg";
 import { useMutation } from "@apollo/client";
 import { loader } from "graphql.macro";
-// import bgGrad from "../assets/img/grad.png";
 import { Context } from "../context";
 const SIGNUP_USER = loader("../graphql/SIGNUP_USER.gql");
 const Signup = (props) => {
@@ -12,8 +12,10 @@ const Signup = (props) => {
 	if (context.user) {
 		history.replace("/");
 	}
+	const slFormRef = useRef();
 	useEffect(() => {
 		document.title = "Signup | SuperChat";
+		slFormRef.current.style.backgroundImage = `url(${landingImg})`;
 	});
 	const [input, setInput] = useState({
 		username: "",
@@ -55,7 +57,7 @@ const Signup = (props) => {
 	};
 
 	return (
-		<div id="sl-form">
+		<div ref={slFormRef} id="sl-form">
 			<div className="container">
 				<form onSubmit={handleSubmit} className="sl-form pt-3 signup">
 					<h3 className="text-center fw-400 fs-35 my-3">

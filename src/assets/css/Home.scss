@@ -246,3 +246,38 @@ img.profile-img {
 		}
 	}
 }
+$ellipsis-ani: dot 900ms infinite;
+$ellipsis-trans: 100ms;
+.ellipsis i {
+	opacity: 0;
+	animation: $ellipsis-ani;
+	animation-delay: 0s;
+	transition: $ellipsis-trans;
+}
+
+.ellipsis i + i {
+	opacity: 0;
+	animation: $ellipsis-ani;
+	animation-delay: 0.2s;
+	transition: $ellipsis-trans;
+}
+
+.ellipsis i + i + i {
+	opacity: 0;
+
+	animation: $ellipsis-ani;
+	animation-delay: 0.3s;
+	transition: $ellipsis-trans;
+}
+
+@keyframes dot {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

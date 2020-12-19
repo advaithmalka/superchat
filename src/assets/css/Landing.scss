@@ -2,6 +2,9 @@
 	#landing-container {
 		height: 95vh;
 		// background: linear-gradient(135deg, #ff552b, #ff4719);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		color: white;
 		// text-align: center;
 		padding-top: 50px;
@@ -25,6 +28,12 @@
 		.col-lg {
 			margin: 20px 0px;
 		}
+	}
+	#landing-footer {
+		text-align: center;
+		background: linear-gradient(135deg, #ff5f1f, #ff4c45);
+		color: white;
+		padding: 20px;
 	}
 }
 
