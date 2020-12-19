@@ -9,7 +9,7 @@ import { getMainDefinition } from "@apollo/client/utilities";
 import { WebSocketLink } from "@apollo/client/link/ws";
 const cache = new InMemoryCache();
 const httpLink = createHttpLink({
-	uri: "http://localhost:9090/graphql",
+	uri: process.env.REACT_APP_ENDPOINT,
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -22,7 +22,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const wsLink = new WebSocketLink({
-	uri: `ws://localhost:9090/graphql`,
+	uri: process.env.REACT_APP_WEBSOCKET_ENDPOINT,
 	options: {
 		reconnect: true,
 		connectionParams: {
