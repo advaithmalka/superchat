@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/superchat/static/css/main.67d57dee.chunk.css",
+    "main.js": "/superchat/static/js/main.f8acece9.chunk.js",
+    "main.js.map": "/superchat/static/js/main.f8acece9.chunk.js.map",
+    "runtime-main.js": "/superchat/static/js/runtime-main.1e3ebf03.js",
+    "runtime-main.js.map": "/superchat/static/js/runtime-main.1e3ebf03.js.map",
+    "static/css/2.3ca2e7a5.chunk.css": "/superchat/static/css/2.3ca2e7a5.chunk.css",
+    "static/js/2.1711e715.chunk.js": "/superchat/static/js/2.1711e715.chunk.js",
+    "static/js/2.1711e715.chunk.js.map": "/superchat/static/js/2.1711e715.chunk.js.map",
+    "static/js/3.801a56b5.chunk.js": "/superchat/static/js/3.801a56b5.chunk.js",
+    "static/js/3.801a56b5.chunk.js.map": "/superchat/static/js/3.801a56b5.chunk.js.map",
+    "index.html": "/superchat/index.html",
+    "static/css/2.3ca2e7a5.chunk.css.map": "/superchat/static/css/2.3ca2e7a5.chunk.css.map",
+    "static/css/main.67d57dee.chunk.css.map": "/superchat/static/css/main.67d57dee.chunk.css.map",
+    "static/js/2.1711e715.chunk.js.LICENSE.txt": "/superchat/static/js/2.1711e715.chunk.js.LICENSE.txt",
+    "static/media/add-contact.ae150140.svg": "/superchat/static/media/add-contact.ae150140.svg",
+    "static/media/chat.6d254d0f.svg": "/superchat/static/media/chat.6d254d0f.svg",
+    "static/media/chevron-left.a650feca.svg": "/superchat/static/media/chevron-left.a650feca.svg",
+    "static/media/contact.e7b077e6.svg": "/superchat/static/media/contact.e7b077e6.svg",
+    "static/media/feature-chat.7b6e61cd.png": "/superchat/static/media/feature-chat.7b6e61cd.png",
+    "static/media/feature-contact.343ec899.png": "/superchat/static/media/feature-contact.343ec899.png",
+    "static/media/feature-resolve.e54a4fa9.png": "/superchat/static/media/feature-resolve.e54a4fa9.png",
+    "static/media/landing.242fce53.jpg": "/superchat/static/media/landing.242fce53.jpg",
+    "static/media/preview.a92dfc72.png": "/superchat/static/media/preview.a92dfc72.png",
+    "static/media/send-icon.3a0e9ae1.svg": "/superchat/static/media/send-icon.3a0e9ae1.svg",
+    "static/media/status-declined.987446d1.svg": "/superchat/static/media/status-declined.987446d1.svg",
+    "static/media/status-pending.8defc8cd.svg": "/superchat/static/media/status-pending.8defc8cd.svg",
+    "static/media/trash.da413092.svg": "/superchat/static/media/trash.da413092.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1e3ebf03.js",
+    "static/css/2.3ca2e7a5.chunk.css",
+    "static/js/2.1711e715.chunk.js",
+    "static/css/main.67d57dee.chunk.css",
+    "static/js/main.f8acece9.chunk.js"
+  ]
+}
