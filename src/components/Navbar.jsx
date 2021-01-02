@@ -70,7 +70,7 @@ function Navbar() {
 					<ul className="navbar-nav">
 						{user ? (
 							<a
-								href={`https://advaithm26.github.io/devmedia/users/${user.username}`}
+								href={`https://advaithmalka.github.io/devmedia/users/${user.username}`}
 								style={{ textDecoration: "none" }}
 							>
 								<li className="nav-item nav-content nav-link nav-title text-uppercase fs-16 r-router-link">

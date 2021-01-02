@@ -127,7 +127,7 @@ const Conversation = ({ convo, setConvo, user }) => {
 					style={{ position: "absolute", left: 15, top: 20 }}
 				/>
 				<a
-					href={`https://advaithm26.github.io/devmedia/users/${convo.username}`}
+					href={`https://advaithmalka.github.io/devmedia/users/${convo.username}`}
 					title={`View ${convo.username}'s DevMedia profile`}
 					id="convo-username"
 					target="_blank"

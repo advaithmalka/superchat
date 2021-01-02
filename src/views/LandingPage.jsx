@@ -116,7 +116,7 @@ const LandingPage = () => {
 				<a
 					target="_blank"
 					rel="noreferrer"
-					href="https://advaithm26.github.io"
+					href="https://advaithmalka.github.io"
 					className="text-white text-decoration-none"
 				>
 					Advaith Malka

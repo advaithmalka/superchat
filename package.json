@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://advaithm26.github.io/superchat/",
+  "homepage": "https://advaitmalka.github.io/superchat/",
   "dependencies": {
     "@apollo/client": "^3.2.9",
     "@testing-library/jest-dom": "^5.11.4",
